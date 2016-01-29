@@ -1,0 +1,121 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="SISPRES._Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href ="Stylos.css" type ="text/css" rel ="Stylesheet" />
+    <link href = "StyleSheet.css" type ="text/css" rel ="Stylesheet" />
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+     <table id="tabCabecera" width ="100%">
+        <tr>
+            <td colspan =4  style="height: 21px">
+                <strong><span style="font-size: 14pt; color: #336600; font-family: Verdana">
+                </span></strong><strong><span class="txtTitulo">
+                    Prestamo de Equipos</span></strong></td>
+        </tr>
+        <tr>
+            <td colspan =4 style="height: 10px" align =middle>
+                    <hr class="ColorLine" />
+                </td>
+        </tr>   
+          
+    </table>
+    <table width ="100%">
+                                <tr> 
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:25%">
+
+                                    </td>
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:24%">                             
+                                   </td>
+                                </tr>
+                                <tr>
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:25%">
+                                        &nbsp;</td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="TD" style="width:11%">Modelo de Equipo</td>
+                                    <td class="TD" style="width:25%">
+                                        <asp:DropDownList ID="ddlLocalidad" runat="server"
+                                            CssClass="PageInfo" Width="300px">
+                                        </asp:DropDownList>
+                                    </td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="TD" style="width:11%">Serie de Equipo</td>
+                                    <td class="TD" style="width:25%">
+                                        <asp:DropDownList ID="ddlLocalidad0" runat="server"
+                                            CssClass="PageInfo" Width="300px">
+                                        </asp:DropDownList>
+                                    </td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                            &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:25%">
+                                        &nbsp;</td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr> 
+                                <tr>
+                                    <td class="TD" style="width:11%">Vendedor</td>
+                                    <td class="TD" style="width:25%">
+                                        <asp:DropDownList ID="ddlLocalidad1" runat="server"
+                                            CssClass="PageInfo" Width="300px">
+                                        </asp:DropDownList>
+                                    </td>
+                                    <td class="TD" style="width:11%">Fecha de Devolución</td>
+                                    <td class="TD" style="width:24%">
+                                        <asp:TextBox ID="txtFecDesde" runat="server" Width="134px" CssClass="PageRelleno"></asp:TextBox>
+                                       <%-- <cc1:CalendarExtender ID="caltxtFecHasta" runat="Server" 
+                                            BehaviorID="txtFecDesde" Format="dd/MM/yyyy" TargetControlID="txtFecDesde">
+                                        </cc1:CalendarExtender>--%>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:25%">
+                                        &nbsp;</td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr>
+                                 <tr>
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:25%"><asp:Button ID="btnRegistrar" runat ="server" Text ="Registrar"  ont-Bold="True" 
+                        ForeColor="#003300" CssClass="boton" /> 
+                                        &nbsp;</td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr>
+                                 <tr>
+                                    <td class="TD" style="width:11%"></td>
+                                    <td class="TD" style="width:25%">
+                                        &nbsp;</td>
+                                    <td class="TD" style="width:11%">&nbsp;</td>
+                                    <td class="TD" style="width:24%">
+                                        &nbsp;</td>
+                                </tr>
+    </table>
+  
+    </form>
+</body>
+</html>
