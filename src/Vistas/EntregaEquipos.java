@@ -33,6 +33,7 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
         cb_vendedor = new javax.swing.JComboBox();
         area_equipos = new javax.swing.JScrollPane();
         lista_equipos = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setTitle("Entrega de Equipos");
         setToolTipText("");
@@ -52,6 +53,8 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
         lista_equipos.setRows(5);
         area_equipos.setViewportView(lista_equipos);
 
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -62,14 +65,16 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
                         .addGap(83, 83, 83)
                         .addComponent(jLabel1)
                         .addGap(31, 31, 31)
-                        .addComponent(cb_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cb_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addComponent(b_entrega))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(103, 103, 103)
                         .addComponent(area_equipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,7 +82,8 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(cb_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(area_equipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
@@ -98,6 +104,7 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
     private javax.swing.JButton b_entrega;
     private javax.swing.JComboBox cb_vendedor;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextArea lista_equipos;
     // End of variables declaration//GEN-END:variables
 }
