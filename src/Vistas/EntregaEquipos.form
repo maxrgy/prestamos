@@ -64,7 +64,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C&#xf3;digo Vendedor:"/>
+        <Property name="text" type="java.lang.String" value="          Vendedor:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="b_entrega">
@@ -83,6 +83,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_vendedorActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="area_equipos">
       <AuxValues>

@@ -37,11 +37,16 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
         setTitle("Entrega de Equipos");
         setToolTipText("");
 
-        jLabel1.setText("Código Vendedor:");
+        jLabel1.setText("          Vendedor:");
 
         b_entrega.setText("Entregar");
 
         cb_vendedor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_vendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_vendedorActionPerformed(evt);
+            }
+        });
 
         lista_equipos.setColumns(20);
         lista_equipos.setRows(5);
@@ -82,6 +87,10 @@ public class EntregaEquipos extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cb_vendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_vendedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_vendedorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
