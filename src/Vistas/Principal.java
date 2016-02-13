@@ -40,13 +40,14 @@ public class Principal extends javax.swing.JFrame {
         EscritorioPanel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        MeIngresar = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
+        Me_Clientes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
 
         CD_UsuarioNoRegistrado.setTitle("Mensaje de error");
@@ -91,8 +92,13 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.setText("Usuario");
 
-        jMenuItem1.setText("Ingresar");
-        jMenu1.add(jMenuItem1);
+        MeIngresar.setText("Ingresar");
+        MeIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MeIngresarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(MeIngresar);
 
         jMenuItem2.setText("Cerrar Sesión");
         jMenuItem2.setEnabled(false);
@@ -134,6 +140,14 @@ public class Principal extends javax.swing.JFrame {
         jMenu4.add(jMenuItem7);
 
         jMenu2.add(jMenu4);
+
+        Me_Clientes.setText("Clientes");
+        Me_Clientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Me_ClientesActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Me_Clientes);
 
         jMenuBar1.add(jMenu2);
 
@@ -177,6 +191,18 @@ public class Principal extends javax.swing.JFrame {
         creaEquipo.show();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void Me_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Me_ClientesActionPerformed
+        MantenimientoClientes mantClie = new MantenimientoClientes();
+        EscritorioPanel.add(mantClie);
+        mantClie.show();
+    }//GEN-LAST:event_Me_ClientesActionPerformed
+
+    private void MeIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeIngresarActionPerformed
+        LoginUsuario login = new LoginUsuario();
+        EscritorioPanel.add(login);
+        login.show();
+    }//GEN-LAST:event_MeIngresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -215,13 +241,14 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog CD_UsuarioNoRegistrado;
     private javax.swing.JDesktopPane EscritorioPanel;
+    private javax.swing.JMenuItem MeIngresar;
+    private javax.swing.JMenuItem Me_Clientes;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
