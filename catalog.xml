@@ -4,4 +4,17 @@
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd0" uri="xml-resources/web-service-references/Autenticacion/wsdl/localhost_49403/Autenticacion.svc.xsd_xsd0.xsd"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd1" uri="xml-resources/web-service-references/Autenticacion/wsdl/localhost_49403/Autenticacion.svc.xsd_xsd1.xsd"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd2" uri="xml-resources/web-service-references/Autenticacion/wsdl/localhost_49403/Autenticacion.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?wsdl" uri="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd0" uri="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd2" uri="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd1" uri="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd3" uri="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?wsdl" uri="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd0" uri="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd3" uri="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd1" uri="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd2" uri="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?wsdl" uri="xml-resources/web-service-references/ReservaEquipo/wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?xsd=xsd0" uri="xml-resources/web-service-references/ReservaEquipo/wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?xsd=xsd1" uri="xml-resources/web-service-references/ReservaEquipo/wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.xsd_xsd1.xsd"/>
 </catalog>

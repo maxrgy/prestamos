@@ -7,7 +7,9 @@ package Vistas;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.datacontract.schemas._2004._07.prestamosservicios.User;
+import javax.swing.JOptionPane;
+import org.datacontract.schemas._2004._07.usuariosdms.Usuario;
+import org.tempuri.IAutenticacionVerificarExistenciaUsuarioUsuarioNoEncontradoExcepcionFaultFaultMessage;
 import org.tempuri.IAutenticacionVerificarPasswordPasswordIncorrectaExcepcionFaultFaultMessage;
 
 /**
@@ -98,18 +100,31 @@ public class LoginUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_TxUsuarioActionPerformed
 
     private void BtIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtIngresarActionPerformed
-        String usuario = TxUsuario.getText();
+        String usua = TxUsuario.getText();
         String password = TxContrasena.getText();
-        User verificado= verificarExistenciaUsuario(usuario,password);
-        System.out.println(verificado.getCorreo().getValue());
-        int tipo=0;
-        
+        Usuario verificado = new Usuario();
+        int tipo = 0;
         try {
-            tipo = verificarPassword(verificado,password);
-        } catch (IAutenticacionVerificarPasswordPasswordIncorrectaExcepcionFaultFaultMessage ex) {
-            Logger.getLogger(LoginUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            verificado = verificarExistenciaUsuario(usua);
+            try {
+                tipo = verificarPassword(verificado, password);
+                JOptionPane.showOptionDialog(this, "Autenticación existosa", "Login", JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Cancelar");
+                this.setVisible(false);
+                
+                
+                
+            } catch (IAutenticacionVerificarPasswordPasswordIncorrectaExcepcionFaultFaultMessage ex) {
+                TxContrasena.setText("");
+                JOptionPane.showOptionDialog(this, ex.getFaultInfo().getMensaje().getValue(), ex.getMessage(), JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Cancelar "}, "Aceptar");
+            }
+        } catch (IAutenticacionVerificarExistenciaUsuarioUsuarioNoEncontradoExcepcionFaultFaultMessage ex) {
+            TxUsuario.setText("");
+            TxContrasena.setText("");
+            JOptionPane.showOptionDialog(this, ex.getFaultInfo().getMensaje().getValue(), ex.getMessage(), JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Cancelar");
+            
         }
-        System.out.println("El usuario " + verificado.getCodigo().getValue()+" es de tipo "+ tipo);
+        
+        System.out.println("El usuario " + verificado.getCodigo().getValue() + " es de tipo " + tipo);
     }//GEN-LAST:event_BtIngresarActionPerformed
 
 
@@ -121,17 +136,16 @@ public class LoginUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
-    private static User verificarExistenciaUsuario(java.lang.String usuario, java.lang.String password) {
+    private static Usuario verificarExistenciaUsuario(java.lang.String usuario) throws IAutenticacionVerificarExistenciaUsuarioUsuarioNoEncontradoExcepcionFaultFaultMessage {
         org.tempuri.Autenticacion service = new org.tempuri.Autenticacion();
         org.tempuri.IAutenticacion port = service.getBasicHttpBindingIAutenticacion();
-        return port.verificarExistenciaUsuario(usuario, password);
+        return port.verificarExistenciaUsuario(usuario);
     }
 
-    private static Integer verificarPassword(org.datacontract.schemas._2004._07.prestamosservicios.User usuarioConUsername, java.lang.String password) throws IAutenticacionVerificarPasswordPasswordIncorrectaExcepcionFaultFaultMessage {
+    private static Integer verificarPassword(org.datacontract.schemas._2004._07.usuariosdms.Usuario usuarioConUsername, java.lang.String password) throws IAutenticacionVerificarPasswordPasswordIncorrectaExcepcionFaultFaultMessage {
         org.tempuri.Autenticacion service = new org.tempuri.Autenticacion();
         org.tempuri.IAutenticacion port = service.getBasicHttpBindingIAutenticacion();
         return port.verificarPassword(usuarioConUsername, password);
     }
 
-    
 }

@@ -45,10 +45,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        MeEquipos = new javax.swing.JMenu();
+        MeAgregar = new javax.swing.JMenuItem();
         Me_Clientes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        MeReEquipos = new javax.swing.JMenuItem();
 
         CD_UsuarioNoRegistrado.setTitle("Mensaje de error");
         CD_UsuarioNoRegistrado.setResizable(false);
@@ -124,22 +125,22 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem5.setText("Categorías");
         jMenu2.add(jMenuItem5);
 
-        jMenu4.setText("Equipos");
-        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+        MeEquipos.setText("Equipos");
+        MeEquipos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu4ActionPerformed(evt);
+                MeEquiposActionPerformed(evt);
             }
         });
 
-        jMenuItem7.setText("Agregar");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        MeAgregar.setText("Agregar");
+        MeAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                MeAgregarActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem7);
+        MeEquipos.add(MeAgregar);
 
-        jMenu2.add(jMenu4);
+        jMenu2.add(MeEquipos);
 
         Me_Clientes.setText("Clientes");
         Me_Clientes.addActionListener(new java.awt.event.ActionListener() {
@@ -151,8 +152,16 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Consultas");
-        jMenu3.setEnabled(false);
+        jMenu3.setText("Reservas");
+
+        MeReEquipos.setText("Reserva de Equipos");
+        MeReEquipos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MeReEquiposActionPerformed(evt);
+            }
+        });
+        jMenu3.add(MeReEquipos);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -181,15 +190,15 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+    private void MeEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeEquiposActionPerformed
         
-    }//GEN-LAST:event_jMenu4ActionPerformed
+    }//GEN-LAST:event_MeEquiposActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void MeAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeAgregarActionPerformed
         MantenimientoEquipos creaEquipo = new MantenimientoEquipos();
         EscritorioPanel.add(creaEquipo);
         creaEquipo.show();
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_MeAgregarActionPerformed
 
     private void Me_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Me_ClientesActionPerformed
         
@@ -200,6 +209,12 @@ public class Principal extends javax.swing.JFrame {
         EscritorioPanel.add(login);
         login.show();
     }//GEN-LAST:event_MeIngresarActionPerformed
+
+    private void MeReEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeReEquiposActionPerformed
+        ReservaEquipo reEquipo = new ReservaEquipo();
+        EscritorioPanel.add(reEquipo);
+        reEquipo.show();
+    }//GEN-LAST:event_MeReEquiposActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,18 +254,19 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog CD_UsuarioNoRegistrado;
     private javax.swing.JDesktopPane EscritorioPanel;
+    private javax.swing.JMenuItem MeAgregar;
     private javax.swing.JMenuItem MeCerrar;
+    private javax.swing.JMenu MeEquipos;
     private javax.swing.JMenuItem MeIngresar;
+    private javax.swing.JMenuItem MeReEquipos;
     private javax.swing.JMenu MeUsuario;
     private javax.swing.JMenuItem Me_Clientes;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem7;
     // End of variables declaration//GEN-END:variables
 
    

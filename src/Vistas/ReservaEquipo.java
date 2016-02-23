@@ -6,17 +6,38 @@
 
 package Vistas;
 
+import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author utilisateur
  */
 public class ReservaEquipo extends javax.swing.JInternalFrame {
 
+    DefaultComboBoxModel ModelModelos;
+    List<String> modelos;
+    Iterator iterator;
+    String nuevomodelo;
     /**
      * Creates new form ReservaEquipo
      */
     public ReservaEquipo() {
+        ModelModelos = new DefaultComboBoxModel();
         initComponents();
+        ModelModelos.addElement("Acer");
+        ModelModelos.addElement("Toshiba");
+        ModelModelos.addElement("iPAD");
+        ModelModelos.addElement("HP");
+        ModelModelos.addElement("HPPavilion");
+        ModelModelos.addElement("Sony");
+        ModelModelos.addElement("ToshibaSatellite");
+        ModelModelos.addElement("ZEBRA");
+        
+        
     }
 
     /**
@@ -36,15 +57,15 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        f_ruc = new javax.swing.JTextField();
-        f_motivo = new javax.swing.JTextField();
+        TxRUC = new javax.swing.JTextField();
+        TxMotivo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        f_fechadevolucion = new javax.swing.JTextField();
+        BtReserva = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        cb_modelo = new javax.swing.JComboBox();
+        CbModelo = new javax.swing.JComboBox();
+        jLabel6 = new javax.swing.JLabel();
+        TxUsuario = new javax.swing.JTextField();
 
         setTitle("Reserva de Equipo");
 
@@ -125,9 +146,9 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        f_motivo.addActionListener(new java.awt.event.ActionListener() {
+        TxMotivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_motivoActionPerformed(evt);
+                TxMotivoActionPerformed(evt);
             }
         });
 
@@ -135,46 +156,47 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
 
         jLabel5.setText("RUC Cliente:");
 
-        jLabel6.setText("Fecha de Devolución:");
-
-        jButton2.setText("Reservar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BtReserva.setText("Reservar");
+        BtReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        f_fechadevolucion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_fechadevolucionActionPerformed(evt);
+                BtReservaActionPerformed(evt);
             }
         });
 
         jLabel7.setText("Motivo:");
 
-        cb_modelo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CbModelo.setModel(ModelModelos);
+
+        jLabel6.setText("Usuario:");
+
+        TxUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addGap(0, 179, Short.MAX_VALUE)
+                .addComponent(BtReserva)
                 .addGap(171, 171, 171))
             .addGroup(layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel7)
+                .addGap(120, 120, 120)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(jLabel6))
                 .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(f_motivo, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(f_fechadevolucion, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cb_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CbModelo, 0, 116, Short.MAX_VALUE)
+                    .addComponent(TxMotivo)
+                    .addComponent(TxUsuario))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -183,28 +205,28 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(217, 217, 217)
-                    .addComponent(f_ruc, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(138, Short.MAX_VALUE)))
+                    .addComponent(TxRUC, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(94, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cb_modelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(72, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CbModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f_motivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxMotivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(f_fechadevolucion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addComponent(jButton2)
+                    .addComponent(TxUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addComponent(BtReserva)
                 .addGap(42, 42, 42))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -214,8 +236,8 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(102, 102, 102)
-                    .addComponent(f_ruc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(156, Short.MAX_VALUE)))
+                    .addComponent(TxRUC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(160, Short.MAX_VALUE)))
         );
 
         pack();
@@ -229,29 +251,32 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Tx_CategoriaActionPerformed
 
-    private void f_motivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_motivoActionPerformed
+    private void TxMotivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxMotivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_f_motivoActionPerformed
+    }//GEN-LAST:event_TxMotivoActionPerformed
 
-    private void f_fechadevolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_fechadevolucionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_f_fechadevolucionActionPerformed
+    private void BtReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtReservaActionPerformed
+        int indice = CbModelo.getSelectedIndex();
+        String mensajefinal = registrarPrestamo(TxRUC.getText(), CbModelo.getItemAt(indice).toString(),TxUsuario.getText(), TxMotivo.getText());
+        JOptionPane.showOptionDialog(this, mensajefinal,"Validación de Negocio",  JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null, new Object[]{" Aceptar "}, "Cancelar");
+        System.out.println(mensajefinal);
+    }//GEN-LAST:event_BtReservaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void TxUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_TxUsuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtReserva;
+    private javax.swing.JComboBox CbModelo;
+    private javax.swing.JTextField TxMotivo;
+    private javax.swing.JTextField TxRUC;
+    private javax.swing.JTextField TxUsuario;
     private javax.swing.JTextField Tx_Categoria;
     private javax.swing.JTextField Tx_Estado;
     private javax.swing.JTextField Tx_Modelo;
-    private javax.swing.JComboBox cb_modelo;
-    private javax.swing.JTextField f_fechadevolucion;
-    private javax.swing.JTextField f_motivo;
-    private javax.swing.JTextField f_ruc;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -261,4 +286,11 @@ public class ReservaEquipo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
+
+    
+    private static String registrarPrestamo(java.lang.String cliente, java.lang.String equipo, java.lang.String usuario, java.lang.String motivo) {
+        org.tempuri.ReservaEquipo service = new org.tempuri.ReservaEquipo();
+        org.tempuri.IReservaEquipo port = service.getBasicHttpBindingIReservaEquipo();
+        return port.registrarPrestamo(cliente, equipo, usuario, motivo);
+    }
 }

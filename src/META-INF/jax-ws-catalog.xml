@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?wsdl" uri="wsdl/dmsprestamos.apphb.com/Autenticacion.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd0" uri="wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd3" uri="wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd1" uri="wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Autenticacion.svc?xsd=xsd2" uri="wsdl/dmsprestamos.apphb.com/Autenticacion.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?wsdl" uri="wsdl/dmsprestamos.apphb.com/Equipos.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd0" uri="wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd2" uri="wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd1" uri="wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/Equipos.svc?xsd=xsd3" uri="wsdl/dmsprestamos.apphb.com/Equipos.svc.xsd_xsd3.xsd"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?wsdl" uri="wsdl/localhost_49403/Autenticacion.svc.wsdl"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd0" uri="wsdl/localhost_49403/Autenticacion.svc.xsd_xsd0.xsd"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd1" uri="wsdl/localhost_49403/Autenticacion.svc.xsd_xsd1.xsd"/>
     <system systemId="http://localhost:49403/Autenticacion.svc?xsd=xsd2" uri="wsdl/localhost_49403/Autenticacion.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?wsdl" uri="wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.wsdl"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?xsd=xsd0" uri="wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://dmsprestamos.apphb.com/ReservaEquipo.svc?xsd=xsd1" uri="wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.xsd_xsd1.xsd"/>
 </catalog>

@@ -18,8 +18,8 @@
     </target>
     <target name="wsimport-client-Autenticacion" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/Autenticacion"/>
-        <property name="wsdl-Autenticacion" location="xml-resources/web-service-references/Autenticacion/wsdl/localhost_49403/Autenticacion.svc.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Autenticacion" destdir="${build.generated.dir}/jax-wsCache/Autenticacion" wsdl="${wsdl-Autenticacion}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:49403/Autenticacion.svc?wsdl" xnocompile="true" xendorsed="true">
+        <property name="wsdl-Autenticacion" location="xml-resources/web-service-references/Autenticacion/wsdl/dmsprestamos.apphb.com/Autenticacion.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Autenticacion" destdir="${build.generated.dir}/jax-wsCache/Autenticacion" wsdl="${wsdl-Autenticacion}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://dmsprestamos.apphb.com/Autenticacion.svc?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-Autenticacion}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/Autenticacion"/>
         </wsimport>
@@ -33,5 +33,39 @@
         <delete dir="${build.generated.dir}/jax-wsCache/Autenticacion"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-Autenticacion"/>
+    <target name="wsimport-client-Equipos" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Equipos"/>
+        <property name="wsdl-Equipos" location="xml-resources/web-service-references/Equipos/wsdl/dmsprestamos.apphb.com/Equipos.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Equipos" destdir="${build.generated.dir}/jax-wsCache/Equipos" wsdl="${wsdl-Equipos}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://dmsprestamos.apphb.com/Equipos.svc?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-Equipos}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Equipos"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Equipos">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Equipos" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Equipos"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-ReservaEquipo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ReservaEquipo"/>
+        <property name="wsdl-ReservaEquipo" location="xml-resources/web-service-references/ReservaEquipo/wsdl/dmsprestamos.apphb.com/ReservaEquipo.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ReservaEquipo" destdir="${build.generated.dir}/jax-wsCache/ReservaEquipo" wsdl="${wsdl-ReservaEquipo}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://dmsprestamos.apphb.com/ReservaEquipo.svc?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ReservaEquipo}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ReservaEquipo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ReservaEquipo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ReservaEquipo" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ReservaEquipo"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Autenticacion, wsimport-client-Equipos, wsimport-client-ReservaEquipo"/>
 </project>
